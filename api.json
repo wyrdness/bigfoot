@@ -1,8 +1,8 @@
 {
   "meta": {
-    "version": "1.0.0",
+    "version": "1.1.0",
     "schema_version": "1.0.0",
-    "last_updated": "2026-02-13",
+    "last_updated": "2026-05-07",
     "repository": "https://github.com/wyrdness/bigfoot",
     "maintainers": [
       {
@@ -16,111 +16,557 @@
       "content": "CC-BY-4.0"
     }
   },
+
   "phenomenon": {
     "id": "bigfoot",
     "name": "Bigfoot",
-    "aliases": [],
-    "category": "CRYPTID",
-    "subcategory": "| Description | Status |",
-    "tags": [
-      "folklore",
-      "mythology"
+    "aliases": [
+      { "name": "Sasquatch", "language": "Halkomelem (Salish)", "region": "Pacific Northwest", "meaning": "Anglicization of sasq'ets, 'wild man'" },
+      { "name": "Skunk Ape", "region": "Florida and the Southeastern United States", "meaning": "named for reported foul odor" },
+      { "name": "Grassman", "region": "Ohio, USA" },
+      { "name": "Fouke Monster", "region": "Boggy Creek, Arkansas, USA" },
+      { "name": "Momo (Missouri Monster)", "region": "Missouri, USA" },
+      { "name": "Honey Island Swamp Monster", "region": "Louisiana, USA" },
+      { "name": "Ts'emekwes", "language": "Lummi", "region": "Pacific Northwest" },
+      { "name": "Stiyaha / Kwi-kwiyai", "language": "Yakama", "region": "Pacific Northwest" },
+      { "name": "Wendigo (sometimes conflated)", "language": "Algonquian", "region": "Northern North America" }
     ],
-    "status": "documented",
+    "category": "CRYPTID",
+    "subcategory": "Humanoid / hominid cryptid",
+    "tags": [
+      "humanoid",
+      "bipedal",
+      "primate",
+      "forest-dwelling",
+      "north-america",
+      "nocturnal",
+      "large-creature",
+      "hominid"
+    ],
+    "status": "active",
     "description": {
-      "summary": "Bigfoot, also known as Sasquatch, is a large, ape-like creature purported to inhabit the forests of North America.",
-      "full": "Bigfoot, also known as Sasquatch, is a large, ape-like creature purported to inhabit the forests of North America. Described as standing 6-10 feet tall, covered in dark hair, and possessing a strong, unpleasant odor, Bigfoot has been reported by thousands of witnesses over several centuries. The phenomenon gained widespread attention in the 1950s-60s and remains one of the most actively investigated cryptids. While no conclusive physical evidence has been scientifically verified, the volume of consistent eyewitness accounts, physical traces, and cultural significance make Bigfoot a cornerstone of cryptozoological research. Bigfoot represents one of the most well-documented cryptid phenomena, with over 10,000 reported sightings across North America, dedicated research organizations, and a rich cultural presence in both Indigenous traditions and modern popular culture."
+      "summary": "A large, hairy, bipedal humanoid creature reported throughout North America, particularly in the Pacific Northwest. One of the most extensively reported and culturally entrenched cryptids, with thousands of eyewitness accounts but no specimen accepted by mainstream science.",
+      "full": "Bigfoot, also known as Sasquatch, is the most prominent cryptid of North America. Witnesses describe a large, ape-like creature standing 6 to 10 feet (1.8–3 m) tall, covered in dark hair, walking upright, and sometimes accompanied by a strong, unpleasant odor. Reports cluster in heavily forested regions of the Pacific Northwest and British Columbia but extend across the continent. The modern phenomenon coalesced after large footprints were found at Bluff Creek, California in 1958, and the term 'Bigfoot' was popularized in the Humboldt Times by journalist Andrew Genzoli later that year. Despite many decades of investigation, including academic work by primate anatomists such as Grover Krantz and Jeff Meldrum, no remains, captured specimen, or unambiguous photographic record has been accepted by mainstream zoology. Mainstream scientific consensus treats Bigfoot as a folkloric phenomenon explained by misidentification of bears and humans, hoaxes, and the cultural transmission of expectation. A minority of researchers, drawing on Indigenous tradition and a database of reports with structural consistency, continue to investigate the possibility of an undiscovered North American hominid."
     },
     "etymology": {
-      "origin": "Unknown",
-      "meaning": "To be documented",
-      "first_use": "Unknown"
+      "origin": "The English word 'Bigfoot' was popularized by Andrew Genzoli's 1958 column in the Humboldt Times (Eureka, California) reporting on large tracks discovered by tractor operator Jerry Crew at Bluff Creek. The Halkomelem (Salish) word sasq'ets, anglicized as 'Sasquatch', was popularized by the Canadian schoolteacher J. W. Burns in the 1920s.",
+      "meaning": "Sasquatch derives from sasq'ets, glossed as 'wild man' or 'hairy man'. 'Bigfoot' refers to the very large footprints (commonly 14–18 inches; outliers up to 24 inches) reported with sightings.",
+      "first_use": "1958 (Bigfoot, English); 1929 (Sasquatch, English usage by J. W. Burns)"
     }
   },
+
   "classification": {
     "taxonomy": {
       "category": "CRYPTID",
-      "type": "| Description | Status |",
-      "subtype": "Unknown",
-      "variant": "Unknown"
+      "type": "Humanoid",
+      "subtype": "Hominid / great-ape-like",
+      "variant": "North American"
     },
-    "related_phenomena": []
+    "related_phenomena": [
+      { "id": "yeti", "name": "Yeti", "relationship": "similar", "description": "Himalayan hairy hominid cryptid" },
+      { "id": "yowie", "name": "Yowie", "relationship": "regional_variant", "description": "Australian hairy hominid cryptid" },
+      { "id": "almas", "name": "Almas", "relationship": "similar", "description": "Central Asian hairy hominid cryptid" },
+      { "id": "orang-pendek", "name": "Orang Pendek", "relationship": "similar", "description": "Short bipedal cryptid of Sumatra" },
+      { "id": "yeren", "name": "Yeren", "relationship": "similar", "description": "Chinese hairy wild man cryptid" },
+      { "id": "skunk-ape", "name": "Skunk Ape", "relationship": "regional_variant", "description": "Southeastern US variant centered in Florida" },
+      { "id": "grafton-monster", "name": "Grafton Monster", "relationship": "related", "description": "Regional West Virginia hominid sighting cluster" },
+      { "id": "beast-of-bray-road", "name": "Beast of Bray Road", "relationship": "related", "description": "Wisconsin bipedal cryptid sometimes grouped with dogman/sasquatch reports" }
+    ]
   },
+
   "characteristics": {
     "physical": {
-      "features": [],
-      "morphology": "See README.md for detailed physical description"
+      "height": { "min": 1.8, "max": 3.0, "unit": "meters", "confidence": "medium" },
+      "weight": { "min": 180, "max": 450, "unit": "kilograms", "confidence": "low" },
+      "coloration": ["dark brown", "black", "reddish-brown", "auburn", "grey (in older reports and Indigenous accounts)"],
+      "features": [
+        { "feature": "Body hair", "description": "Coarse hair covering the entire body, typically 5–10 cm (2–4 in) long; reports rarely describe naked skin", "frequency": "always" },
+        { "feature": "Bipedal locomotion", "description": "Walks upright on two legs with a smooth, gliding gait and very long stride length (often >100 cm)", "frequency": "always" },
+        { "feature": "Large feet", "description": "Footprints commonly 35–46 cm (14–18 in) long, with five toes; occasional outliers up to 60 cm (24 in)", "frequency": "always" },
+        { "feature": "Heavy brow ridge / sloped forehead", "description": "Pronounced supraorbital torus and low forehead; conical or sagittal-crested skull shape sometimes reported", "frequency": "common" },
+        { "feature": "Reflective eyeshine", "description": "Witnesses commonly describe red, orange, or yellow eyeshine at night, brighter than known mammals at the same distance", "frequency": "common" },
+        { "feature": "Foul odor", "description": "Strong sulfurous, musky, or skunk-like smell reported during close encounters; gives rise to the regional name 'Skunk Ape'", "frequency": "common" },
+        { "feature": "Long arms", "description": "Arms reach near the knees when standing, an intermembral index more apelike than human", "frequency": "common" },
+        { "feature": "No visible neck", "description": "Head appears set directly on the shoulders", "frequency": "common" }
+      ],
+      "morphology": "Bipedal hominid morphology with proportions and gait kinematics intermediate between modern humans and large extant great apes. Researchers including Jeff Meldrum have argued, on the basis of footprint casts, for a flexible mid-tarsal joint inconsistent with a faked human-style foot."
     },
-    "abilities": [],
+    "abilities": [
+      { "ability": "Wood knocking", "description": "Striking trees with branches or rocks, producing percussive knocks audible at long range; interpreted by some researchers as territorial signaling", "frequency": "common", "evidence_level": "documented" },
+      { "ability": "Vocalizations", "description": "Howls, screams, whoops, growls, and complex vocal sequences. The 'Sierra Sounds' recordings are the most-studied audio dataset", "frequency": "common", "evidence_level": "documented" },
+      { "ability": "Stealth movement", "description": "Reported to move silently and rapidly through dense forest despite size", "frequency": "common", "evidence_level": "reported" },
+      { "ability": "Stone and stick throwing", "description": "Witnesses report stones, sticks, and pinecones being thrown at observers or campsites, sometimes from areas where no person was visible", "frequency": "occasional", "evidence_level": "reported" },
+      { "ability": "Stick structures and tree breaks", "description": "Configurations of broken or arranged limbs found in remote areas, attributed by some researchers to deliberate construction", "frequency": "occasional", "evidence_level": "reported" },
+      { "ability": "Infrasound", "description": "Hypothesis that low-frequency vocalizations cause witnesses to feel disoriented or fearful; not experimentally confirmed", "frequency": "rare", "evidence_level": "speculation" }
+    ],
     "behavior": {
-      "activity_period": "unknown",
-      "disposition": "unknown",
-      "habitat_preference": []
+      "activity_period": "crepuscular",
+      "disposition": "neutral",
+      "social_structure": "variable",
+      "habitat_preference": ["temperate rainforest", "mixed conifer forest", "mountainous wilderness", "river valleys", "swamp and bottomland (in southeastern variants)"],
+      "diet": "Reported as omnivorous: berries, roots, fish (caught from streams in some reports), small mammals, and carrion",
+      "patterns": [
+        "Avoids prolonged human contact",
+        "Apparent curiosity at close range, often paralleling a campsite at distance",
+        "Defensive of young or feeding sites; aggressive displays rather than attacks",
+        "Higher report frequency at dawn and dusk",
+        "Seasonal shifts in elevation suggested by clusters of reports"
+      ]
     }
   },
+
   "distribution": {
     "range": {
-      "description": "Unknown",
-      "continents": [],
-      "countries": [],
-      "regions": []
+      "description": "Reports span the contiguous United States, Alaska, and Canada. The densest, most studied clusters are in the temperate rainforests of the Pacific Northwest (northern California, Oregon, Washington, British Columbia). Secondary clusters occur in the Ohio River Valley, Appalachia, the Florida Everglades, and the Boreal forests of central Canada.",
+      "continents": ["North America"],
+      "countries": ["United States", "Canada"],
+      "regions": [
+        "Pacific Northwest",
+        "Northern California",
+        "British Columbia",
+        "Cascadia",
+        "Ohio River Valley",
+        "Appalachian Mountains",
+        "Florida Everglades",
+        "Pacific Coast Range",
+        "Olympic Peninsula"
+      ]
     },
-    "hotspots": [],
+    "hotspots": [
+      {
+        "name": "Bluff Creek",
+        "location": {
+          "description": "Bluff Creek drainage, Six Rivers National Forest",
+          "country": "United States",
+          "region": "Northern California",
+          "coordinates": { "latitude": 41.4494, "longitude": -123.8172 }
+        },
+        "sighting_count": 150,
+        "peak_period": "1958–1970",
+        "notes": "Site of the 1958 Jerry Crew footprint discovery and the 1967 Patterson–Gimlin film"
+      },
+      {
+        "name": "Ape Canyon",
+        "location": {
+          "description": "Eastern flank of Mount St. Helens",
+          "country": "United States",
+          "region": "Washington",
+          "coordinates": { "latitude": 46.1879, "longitude": -122.1900 }
+        },
+        "sighting_count": 75,
+        "peak_period": "1924–present",
+        "notes": "Site of the 1924 Fred Beck miners' incident; the canyon was named for it"
+      },
+      {
+        "name": "Harrison Lake / Sts'ailes Territory",
+        "location": {
+          "description": "Harrison Lake and surrounding mountains",
+          "country": "Canada",
+          "region": "British Columbia",
+          "coordinates": { "latitude": 49.5500, "longitude": -121.7800 }
+        },
+        "sighting_count": 200,
+        "peak_period": "1920s–present",
+        "notes": "Cultural homeland of the Sts'ailes people; the term 'Sasquatch' originates here. Contemporary reports continue."
+      },
+      {
+        "name": "Skookum Meadow",
+        "location": {
+          "description": "Gifford Pinchot National Forest",
+          "country": "United States",
+          "region": "Washington",
+          "coordinates": { "latitude": 46.1700, "longitude": -121.7800 }
+        },
+        "sighting_count": 50,
+        "peak_period": "2000",
+        "notes": "Site of the 2000 BFRO 'Skookum cast' body impression"
+      }
+    ],
     "temporal": {
       "first_recorded": {
-        "date": "Unknown",
+        "date": "Pre-contact",
         "circa": true,
-        "source": "Traditional folklore"
-      }
+        "source": "Indigenous oral traditions of the Pacific Northwest predate European contact"
+      },
+      "peak_activity_periods": [
+        { "period": "1958–1980", "description": "Founding era of modern Bigfoot research, anchored by the Bluff Creek tracks (1958) and Patterson–Gimlin film (1967)" },
+        { "period": "2000–present", "description": "Digital-era resurgence: trail cameras, online reporting, and academic interest from primate anatomists" }
+      ],
+      "seasonal_patterns": "Sighting frequency increases in late summer and autumn, when berry foraging brings reports closer to logging roads and trails."
     }
   },
+
   "history": {
     "origins": {
-      "cultural_roots": "Unknown",
-      "earliest_accounts": "See README.md for historical details",
-      "folklore_connections": "Unknown"
+      "cultural_roots": "Indigenous peoples of the Pacific Northwest — including the Sts'ailes, Lummi, Yakama, Hupa, and Coast Salish nations — maintain long-standing traditions of large, hairy 'wild men' inhabiting the forests. These figures have spiritual and ceremonial significance distinct from the modern cryptozoological framing.",
+      "earliest_accounts": "Indigenous oral tradition dating back centuries; earliest non-Indigenous written accounts in the early 19th century, including David Thompson's 1811 footprint observation near Jasper.",
+      "folklore_connections": "Connected to a global 'wild man' tradition: the European woodwose, Caucasian almas, Himalayan yeti, Sumatran orang pendek, Australian yowie, and others."
     },
-    "timeline": []
+    "timeline": [
+      { "date": "Pre-contact", "event": "Coast Salish, Sts'ailes, Lummi, Yakama, and other nations carry oral traditions of forest-dwelling hairy hominids", "significance": "Cultural baseline predating colonial contact", "source": "Indigenous oral traditions" },
+      { "date": "1811", "event": "Surveyor David Thompson records 14-inch footprints near Jasper, Alberta", "significance": "Earliest known European-language documentation", "source": "Thompson, D. journals (publ. 1916)" },
+      { "date": "1924-07", "event": "Fred Beck and four miners report being attacked by 'ape-men' at what is now Ape Canyon, Mount St. Helens", "significance": "First widely-publicized modern incident; covered in Portland Oregonian", "source": "Beck, F. (1967), I Fought the Apemen of Mt. St. Helens" },
+      { "date": "1929", "event": "Canadian schoolteacher J. W. Burns publishes 'Introducing B.C.'s Hairy Giants' in Maclean's, popularizing 'Sasquatch' from Sts'ailes word sasq'ets", "significance": "Anchors the English-language term", "source": "Maclean's magazine" },
+      { "date": "1958-08-27", "event": "Tractor operator Jerry Crew makes plaster casts of large footprints in the Bluff Creek road project, Northern California", "significance": "Triggers Andrew Genzoli's coining of 'Bigfoot' in Humboldt Times", "source": "Humboldt Times (Eureka, CA)" },
+      { "date": "1967-10-20", "event": "Roger Patterson and Bob Gimlin film a bipedal subject ('Patty') at Bluff Creek", "significance": "The single most-analyzed piece of cryptid evidence in history", "source": "Original 16 mm film footage" },
+      { "date": "1995", "event": "Jeff Meldrum begins publishing on Bigfoot footprint biomechanics from Idaho State University", "significance": "Reintroduction of academic primate-anatomy analysis", "source": "Cryptozoology and peer journals" },
+      { "date": "2000-09-22", "event": "BFRO expedition recovers the 'Skookum cast' from a muddy elk wallow", "significance": "Body-impression rather than footprint cast; central to subsequent debates", "source": "BFRO field report" },
+      { "date": "2002-11", "event": "Family of Ray Wallace claims Wallace faked the 1958 Bluff Creek tracks", "significance": "Skeptics' touchstone; researchers note inconsistencies between Wallace's wooden feet and the casts", "source": "Seattle Times obituary coverage" },
+      { "date": "2014", "event": "Sykes et al. publish a survey genetics study in Proceedings of the Royal Society B examining alleged Bigfoot/Yeti hair samples; all identified as known mammals", "significance": "First peer-reviewed genetic survey", "source": "Proc. R. Soc. B 281:20140161" }
+    ],
+    "modern_era": "Contemporary research combines field investigation with environmental DNA sampling, networked trail cameras, acoustic monitoring, and statistical analysis of report databases (notably the BFRO Geographic Database). The phenomenon retains a strong cultural footprint through media, regional tourism, and Indigenous resurgence movements that re-center the Sasquatch as a being of cultural and ecological significance rather than a quarry."
   },
+
   "sightings": {
     "statistics": {
-      "total_documented": 0,
+      "total_documented": 10000,
       "verified": 0,
-      "disputed": 0,
-      "debunked": 0
+      "disputed": 8500,
+      "debunked": 1200,
+      "date_range": { "earliest": "1811", "latest": "2026" }
     },
-    "notable": [],
+    "notable": [
+      {
+        "id": "bigfoot-sighting-1958-bluff-creek",
+        "name": "Bluff Creek footprints (Jerry Crew)",
+        "date": { "value": "1958-08-27", "precision": "exact" },
+        "location": {
+          "description": "Bluff Creek logging road, Six Rivers National Forest",
+          "country": "United States",
+          "region": "California",
+          "locality": "Del Norte County",
+          "coordinates": { "latitude": 41.4494, "longitude": -123.8172, "precision": "approximate" }
+        },
+        "witnesses": { "count": 1, "types": ["Tractor operator (Jerry Crew)"], "credibility_factors": ["Working road crew context", "Plaster casts preserved"] },
+        "description": "Tractor operator Jerry Crew arrived at the Bluff Creek work site to find lines of human-shaped footprints, ~16 inches long, paralleling and crossing the construction road. Crew made plaster casts and brought them to the Humboldt Times in Eureka, where Andrew Genzoli's reporting popularized the name 'Bigfoot'.",
+        "conditions": { "weather": "Dry late-summer", "visibility": "Daylight inspection", "time_of_day": "Morning", "duration": "Tracks documented over multiple days" },
+        "evidence": ["Plaster footprint casts", "Newspaper photographs", "Crew worker testimony"],
+        "credibility": { "rating": "medium", "factors": ["Physical casts preserved", "Wallace family later claimed hoax (2002), disputed by analysts"], "notes": "Foundational incident of the modern Bigfoot era; authenticity remains contested." },
+        "sources": ["Genzoli, A., Humboldt Times (1958)", "Coleman, L. (2003), Bigfoot! The True Story of Apes in America"],
+        "featured": true
+      },
+      {
+        "id": "bigfoot-sighting-1967-patterson-gimlin",
+        "name": "Patterson–Gimlin film ('Patty')",
+        "date": { "value": "1967-10-20", "precision": "exact" },
+        "location": {
+          "description": "Bluff Creek, Six Rivers National Forest",
+          "country": "United States",
+          "region": "California",
+          "locality": "Del Norte County",
+          "coordinates": { "latitude": 41.4494, "longitude": -123.8172, "precision": "approximate" }
+        },
+        "witnesses": { "count": 2, "types": ["Roger Patterson (filmmaker)", "Bob Gimlin (rancher)"], "credibility_factors": ["Gimlin's testimony unchanged for nearly 60 years", "Multiple independent biomechanical analyses"] },
+        "description": "Patterson and Gimlin filmed approximately 53 seconds of 16 mm color footage of a tall, dark, hair-covered bipedal subject — long called 'Patty' — walking parallel to a sandbar before turning to face the camera and continuing into the forest. Plaster casts were made of the subject's tracks the same day.",
+        "conditions": { "weather": "Clear, partly sunny", "visibility": "Good, open sandbar", "time_of_day": "Mid-afternoon (~1:15 PM)", "duration": "Encounter ~1 minute, film 53 s" },
+        "evidence": ["16 mm film footage", "Plaster casts of foot tracks", "Witness testimony"],
+        "credibility": { "rating": "medium", "factors": ["Subject's gait and proportions debated for decades", "No definitive disclosure of a hoax suit", "Costume effects experts split"], "notes": "The most-studied piece of cryptid film evidence in history; primary subject of biomechanical debate." },
+        "sources": ["Murphy, C. & Patterson, R. (2005), The Bigfoot Film Controversy", "Meldrum, J. (2006), Sasquatch: Legend Meets Science"],
+        "featured": true
+      },
+      {
+        "id": "bigfoot-sighting-2000-skookum-cast",
+        "name": "Skookum body cast",
+        "date": { "value": "2000-09-22", "precision": "exact" },
+        "location": {
+          "description": "Skookum Meadow, Gifford Pinchot National Forest",
+          "country": "United States",
+          "region": "Washington",
+          "coordinates": { "latitude": 46.17, "longitude": -121.78, "precision": "approximate" }
+        },
+        "witnesses": { "count": 4, "types": ["BFRO field researchers"], "credibility_factors": ["Documented expedition", "Multi-camera record of casting"] },
+        "description": "During a BFRO expedition, researchers cast a large body impression in muddy elk wallow they argued showed forearm, hip, thigh, and heel imprints of a large primate that had reclined in the mud to retrieve fruit. The interpretation was endorsed by anatomist Grover Krantz; mainstream zoologists, including some primatologists, argue the impression is best explained by a known cervid (elk).",
+        "conditions": { "weather": "Wet conditions, fresh mud", "visibility": "Daylight casting", "time_of_day": "Morning", "duration": "Multi-hour casting session" },
+        "evidence": ["Polyurethane and plaster casts", "Photographs of the wallow", "Hair and possible primate dermatoglyphs (disputed)"],
+        "credibility": { "rating": "low", "factors": ["Interpretation contested by independent zoologists", "No follow-up verifiable evidence"], "notes": "A central case in the post-2000 academic debate over Bigfoot evidence." },
+        "sources": ["BFRO (2000), Skookum Expedition Field Report", "Meldrum, J. (2006), Sasquatch: Legend Meets Science"],
+        "featured": true
+      },
+      {
+        "id": "bigfoot-sighting-1924-ape-canyon",
+        "name": "Ape Canyon attack (Fred Beck)",
+        "date": { "value": "1924-07-12", "precision": "approximate" },
+        "location": {
+          "description": "Eastern flank of Mount St. Helens (later named Ape Canyon)",
+          "country": "United States",
+          "region": "Washington",
+          "locality": "Skamania County",
+          "coordinates": { "latitude": 46.1879, "longitude": -122.1900, "precision": "approximate" }
+        },
+        "witnesses": { "count": 5, "types": ["Prospectors (Fred Beck and four others)"], "credibility_factors": ["Multiple witnesses", "Contemporary newspaper coverage"] },
+        "description": "Five miners at a remote prospecting cabin reported being besieged through the night by several large, hairy bipedal creatures that struck the cabin and threw rocks onto the roof. The miners fired through the walls, and Beck claimed to have shot one creature off a cliff. The party hiked out the following day; the location was later named Ape Canyon.",
+        "conditions": { "weather": "Summer, clear", "visibility": "Night attack with limited visibility", "time_of_day": "Dusk into night", "duration": "Several hours" },
+        "evidence": ["Damage to cabin (cited by Beck)", "Multiple consistent contemporary statements", "Portland Oregonian coverage (July 1924)"],
+        "credibility": { "rating": "medium", "factors": ["Multiple witnesses", "Pre-1958 (precedes modern Bigfoot framing)", "Beck later wrote a 1967 account that is more sensational"], "notes": "Foundational early-20th-century incident." },
+        "sources": ["Portland Oregonian (1924-07-16)", "Beck, F. (1967), I Fought the Apemen of Mt. St. Helens"],
+        "featured": true
+      },
+      {
+        "id": "bigfoot-sighting-2007-jacobs-photographs",
+        "name": "Jacobs photographs (Allegheny National Forest)",
+        "date": { "value": "2007-09-16", "precision": "exact" },
+        "location": {
+          "description": "Allegheny National Forest trail camera",
+          "country": "United States",
+          "region": "Pennsylvania",
+          "coordinates": { "latitude": 41.6, "longitude": -79.0, "precision": "approximate" }
+        },
+        "witnesses": { "count": 0, "types": ["Trail camera (set by Rick Jacobs)"], "credibility_factors": ["Camera-trap timestamp record"] },
+        "description": "Two consecutive automatic trail-camera frames captured an ambiguous primate-like figure on all fours alongside two bear cubs. The Pennsylvania Game Commission identified the subject as a mangy bear; researchers including Jeff Meldrum argued the proportions are wrong for a bear.",
+        "conditions": { "weather": "Clear", "visibility": "Night flash", "time_of_day": "After midnight", "duration": "Two camera frames seconds apart" },
+        "evidence": ["Trail-camera images"],
+        "credibility": { "rating": "low", "factors": ["Officially identified as mangy bear", "Image quality limited"], "notes": "Often cited in debates over the role of mange-affected bears in Bigfoot reports." },
+        "sources": ["Pennsylvania Game Commission press release (2007)", "Meldrum, J. (2007), commentary"],
+        "featured": false
+      }
+    ],
     "database_path": "./sightings/"
   },
+
   "evidence": {
-    "physical": [],
-    "photographic": [],
-    "video": [],
-    "audio": [],
-    "trace": []
+    "physical": [
+      {
+        "id": "bigfoot-evidence-skookum-cast",
+        "type": "body impression",
+        "name": "Skookum cast",
+        "date": "2000-09-22",
+        "description": "Approximately 1.5 m × 1 m polyurethane cast of a body impression in mud, claimed to show the imprint of a primate's forearm, hip, and heel.",
+        "location": "Skookum Meadow, Gifford Pinchot National Forest, Washington",
+        "status": "disputed",
+        "analysis": "Endorsed as primate by anatomists Grover Krantz and Jeff Meldrum; argued to be a wallowing elk by independent zoologists.",
+        "source": "BFRO (2000)"
+      },
+      {
+        "id": "bigfoot-evidence-cripplefoot-casts",
+        "type": "footprints",
+        "name": "Bossburg 'Cripple Foot' casts",
+        "date": "1969-12",
+        "description": "Series of 1,089 tracks in snow near Bossburg, Washington, including casts showing a deformed right foot consistent with a clubfoot pathology.",
+        "status": "disputed",
+        "analysis": "John Napier (Smithsonian primatologist) noted the deformity would be difficult to fake credibly given biomechanical accuracy.",
+        "source": "Napier, J. (1973), Bigfoot: The Yeti and Sasquatch in Myth and Reality"
+      },
+      {
+        "id": "bigfoot-evidence-elkins-prints",
+        "type": "footprints",
+        "name": "Walla Walla / Freeman dermatoglyph casts",
+        "date": "1982-06",
+        "description": "Footprint casts found by U.S. Forest Service patrolman Paul Freeman in the Blue Mountains of Washington showing apparent dermatoglyphic (skin ridge) detail.",
+        "status": "disputed",
+        "analysis": "Studied by Jeff Meldrum and forensic ridge-detail analyst Jimmy Chilcutt (Conroe PD); argued to show patterns inconsistent with a casted hoax.",
+        "source": "Meldrum, J. (2006), Sasquatch: Legend Meets Science"
+      }
+    ],
+    "photographic": [
+      {
+        "id": "bigfoot-evidence-pgf",
+        "type": "film",
+        "name": "Patterson–Gimlin film",
+        "date": "1967-10-20",
+        "description": "53 seconds of 16 mm color film of a bipedal subject ('Patty') at Bluff Creek.",
+        "status": "disputed",
+        "analysis": "Subject of more frame-by-frame, biomechanical, and special-effects analysis than any other cryptid film. No analysis has produced consensus on hoax or authenticity.",
+        "source": "Patterson, R. & Gimlin, B. (1967)"
+      },
+      {
+        "id": "bigfoot-evidence-jacobs",
+        "type": "trail camera image",
+        "name": "Jacobs photographs",
+        "date": "2007-09-16",
+        "description": "Trail-camera frames of an ambiguous primate-like figure with bear cubs in the Allegheny National Forest.",
+        "status": "disputed",
+        "analysis": "Identified as a mange-affected bear by the Pennsylvania Game Commission; disputed by Meldrum.",
+        "source": "Jacobs, R. (2007)"
+      }
+    ],
+    "video": [
+      {
+        "id": "bigfoot-evidence-freeman-1994",
+        "type": "video",
+        "name": "Freeman footage",
+        "date": "1994",
+        "description": "Video recording made by Paul Freeman in the Blue Mountains showing a bipedal subject moving away through forest.",
+        "status": "disputed",
+        "analysis": "Image quality too low for conclusive analysis; cited by researchers, dismissed by skeptics.",
+        "source": "Freeman, P. (1994)"
+      },
+      {
+        "id": "bigfoot-evidence-snow-walker",
+        "type": "video",
+        "name": "Snow Walker video",
+        "date": "1996",
+        "description": "Footage from a Canadian wildlife camera in Manitoba showing a bipedal figure moving across a snow-covered field.",
+        "status": "unverified",
+        "analysis": "Aired widely; unable to be authenticated due to provenance gaps.",
+        "source": "Aired on the Discovery Channel"
+      }
+    ],
+    "audio": [
+      {
+        "id": "bigfoot-evidence-sierra-sounds",
+        "type": "audio recording",
+        "name": "Sierra Sounds",
+        "date": "1972-1975",
+        "description": "Multiple sessions of vocal recordings by Ron Morehead and Al Berry in the central Sierra Nevada of California.",
+        "status": "disputed",
+        "analysis": "Examined by R. Lynn Kirlin (University of Wyoming) and crypto-linguist R. Scott Nelson; argued to contain non-human vocal patterns. Independently questioned for provenance.",
+        "source": "Morehead, R. (1996), Bigfoot Recordings"
+      }
+    ],
+    "trace": [
+      {
+        "id": "bigfoot-evidence-hair-samples",
+        "type": "hair samples",
+        "name": "Field-collected hair samples",
+        "description": "Multiple hair samples collected at Bigfoot encounter sites and tested by independent labs.",
+        "status": "debunked",
+        "analysis": "Sykes et al. (2014) sequenced 30 putative Bigfoot/Yeti hair samples in Proc. R. Soc. B 281:20140161. All were identified as known mammals (bear, horse, dog, cow, raccoon, etc.).",
+        "source": "Sykes, B. C. et al. (2014), Proc. R. Soc. B"
+      }
+    ],
+    "documentary": [
+      {
+        "id": "bigfoot-evidence-bfro-database",
+        "type": "report database",
+        "name": "BFRO Geographic Database",
+        "description": "Public, searchable, indexed corpus of >5,000 reviewed Bigfoot reports across the United States and Canada.",
+        "status": "disputed",
+        "analysis": "Largest publicly available structured corpus of Bigfoot reports; foundational dataset for spatial-statistics studies (e.g. Lozier, Aniello & Hickerson, 2009).",
+        "source": "BFRO (https://www.bfro.net)"
+      }
+    ]
   },
+
   "theories": {
-    "paranormal": [],
-    "scientific": [],
-    "skeptical": []
+    "paranormal": [
+      {
+        "name": "Interdimensional / paranormal entity",
+        "description": "Hypothesis that Bigfoot is not a flesh-and-blood animal but an entity that phases between dimensions or planes of reality, accounting for the absence of remains, the abrupt termination of trackways, and reported associations with UFO activity.",
+        "proponents": ["John Keel", "Stan Gordon", "Lon Strickler"],
+        "evidence_cited": ["Reports of sudden disappearances mid-stride", "Trackways that end abruptly without exit signs", "Co-occurrence of UFO sightings in Bigfoot hotspots"]
+      }
+    ],
+    "scientific": [
+      {
+        "name": "Surviving Gigantopithecus blacki",
+        "description": "Bigfoot represents a relict population of the extinct giant ape Gigantopithecus blacki, which crossed Beringia in the Pleistocene and survived in remote North American refugia.",
+        "proponents": ["Grover Krantz", "Jeff Meldrum"],
+        "evidence_cited": ["Footprint scaling and gait kinematics", "Plausible Beringian dispersal in the Pleistocene", "Folkloric continuity across the Pacific Rim"]
+      },
+      {
+        "name": "Undescribed North American hominid",
+        "description": "Bigfoot is an unknown great-ape or hominid species with a small, dispersed population in remote forests, consistent with ecological carrying capacity and explaining elusive behavior.",
+        "proponents": ["John Bindernagel", "Jane Goodall (expressed openness)"],
+        "evidence_cited": ["Recent discoveries of large mammal species (saola, Cross River gorilla)", "Vast continuous wilderness in Cascadia and the Boreal forest"]
+      }
+    ],
+    "skeptical": [
+      {
+        "name": "Misidentification of bears",
+        "description": "Witnesses, particularly at distance or in low light, misidentify upright black or brown bears (especially mange-affected bears) as bipedal hominids.",
+        "proponents": ["Benjamin Radford", "Joe Nickell"],
+        "evidence_cited": ["Bears can stand and walk bipedally for short distances", "Mange-affected bears appear hairless and gaunt", "Pennsylvania Game Commission identification of the 2007 Jacobs trail-camera subject"]
+      },
+      {
+        "name": "Hoax and cultural transmission",
+        "description": "The phenomenon is a cultural complex perpetuated by deliberate hoaxes, copycat sightings, and media reinforcement, with sighting rates correlating with publicity rather than ecology.",
+        "proponents": ["Michael Shermer", "Joshua Blu Buhs"],
+        "evidence_cited": ["Documented hoaxes (Ray Wallace 1958 family claim, Rick Dyer 'body in freezer' hoaxes 2008/2014)", "Spike in reports following 1958 Bluff Creek coverage", "Pattern of sightings clustering near roads and human activity"]
+      },
+      {
+        "name": "No biological evidence",
+        "description": "Despite many decades of investigation, no specimen, body, bone, or unambiguous DNA result has been produced; the scientific community treats Bigfoot as folklore by default.",
+        "proponents": ["Bryan C. Sykes", "Donald Prothero"],
+        "evidence_cited": ["Sykes et al. (2014) genetic survey results", "Absence of remains in over a century of intensive logging and roadbuilding"]
+      }
+    ]
   },
+
   "cultural": {
     "folklore": {
-      "traditions": [],
-      "stories": [],
-      "beliefs": "See README.md for cultural context"
+      "traditions": [
+        "Sts'ailes (Chehalis) Sasquatch traditions",
+        "Lummi Ts'emekwes accounts",
+        "Yakama Stiyaha / Kwi-kwiyai accounts",
+        "Hupa wild-people stories"
+      ],
+      "stories": [
+        "Albert Ostman 1924 abduction account (published 1957)",
+        "Muchalat Harry abduction account (Vancouver Island, 1928)",
+        "Sts'ailes Sasquatch ceremonies"
+      ],
+      "beliefs": "Many Pacific Northwest nations consider these beings as real, sentient, and deserving of respect; some traditions warn against hunting or intentionally seeking them."
+    },
+    "indigenous": {
+      "cultures": ["Sts'ailes (Chehalis)", "Lummi", "Yakama", "Coast Salish", "Hupa", "Yurok", "Karuk"],
+      "significance": "An integral feature of long-standing knowledge systems about the forest, often understood as forest people with spiritual significance rather than as a quarry for cryptozoology.",
+      "sensitivity_note": "Indigenous Sasquatch traditions predate and are distinct from the modern 'Bigfoot' phenomenon; conflating the two erases that distinction.",
+      "respect_guidelines": "Consult tribal cultural authorities before investigating on tribal lands; do not appropriate or commercialize Indigenous beliefs or ceremonies; cite Indigenous sources directly when used."
     },
     "popular_culture": {
-      "literature": [],
-      "film_tv": [],
-      "games": [],
-      "other": []
+      "literature": [
+        "Sasquatch: Legend Meets Science — Jeff Meldrum (2006)",
+        "Bigfoot! The True Story of Apes in America — Loren Coleman (2003)",
+        "Bigfoot: The Life and Times of a Legend — Joshua Blu Buhs (2009)",
+        "Where Bigfoot Walks — Robert Michael Pyle (1995)",
+        "North America's Great Ape: The Sasquatch — John Bindernagel (1998)",
+        "Big Footprints — Grover Krantz (1992)"
+      ],
+      "film_tv": [
+        "The Legend of Boggy Creek (1972)",
+        "Harry and the Hendersons (1987)",
+        "Sasquatch (Hulu documentary, 2021)",
+        "Finding Bigfoot (Animal Planet, 2011–2018)",
+        "Sasquatch Sunset (2024)"
+      ],
+      "games": [
+        "Red Dead Redemption 2 — Easter egg",
+        "Grand Theft Auto V — Easter egg",
+        "Sneak Out — Sasquatch hunting board game"
+      ],
+      "music": [
+        "Sasquatch — Tenacious D (2001)",
+        "Big Foot — King Diamond (1996)"
+      ],
+      "other": [
+        "Jack Link's 'Messin' with Sasquatch' beef-jerky advertising campaign",
+        "Annual Sasquatch festivals in Washington and Ohio",
+        "Pacific Northwest tourism and signage"
+      ]
     }
   },
+
   "research": {
-    "researchers": [],
-    "organizations": [],
-    "ongoing_studies": "None documented"
+    "researchers": [
+      { "name": "Dr. Grover Krantz", "affiliation": "Washington State University (anthropology)", "contribution": "First tenured academic to publish at length on Bigfoot footprint anatomy; argued for relict Gigantopithecus", "period": "1960s–2002" },
+      { "name": "Dr. Jeff Meldrum", "affiliation": "Idaho State University (anatomy and anthropology)", "contribution": "Footprint biomechanics and dermatoglyph analysis; long-running academic engagement", "period": "1995–present" },
+      { "name": "Dr. John Bindernagel", "affiliation": "Independent (wildlife biology)", "contribution": "Field-biology framing of Bigfoot as a North American great ape; multiple monographs", "period": "1963–2018" },
+      { "name": "John Green", "affiliation": "Independent journalist", "contribution": "Compiled the largest pre-Internet sighting database; multiple foundational books", "period": "1957–2016" },
+      { "name": "Loren Coleman", "affiliation": "International Cryptozoology Museum", "contribution": "Cryptozoology curation, sighting cataloguing, and historical synthesis", "period": "1960s–present" },
+      { "name": "Dr. Bryan C. Sykes", "affiliation": "University of Oxford (genetics)", "contribution": "Peer-reviewed genetic survey of putative Bigfoot/Yeti hair samples (2014)", "period": "2012–2014" }
+    ],
+    "organizations": [
+      { "name": "Bigfoot Field Researchers Organization (BFRO)", "url": "https://www.bfro.net", "focus": "Field research and the largest public sighting database" },
+      { "name": "North American Wood Ape Conservancy (NAWAC)", "url": "https://www.woodape.org", "focus": "Scientific framing and habitat-focused research" },
+      { "name": "International Cryptozoology Society", "url": "https://www.cryptozoologysociety.org", "focus": "Peer review and conferences for cryptozoology" },
+      { "name": "Olympic Project", "url": "https://www.olympicproject.com", "focus": "DNA, trail-camera, and acoustic research in the Olympic Peninsula" }
+    ],
+    "ongoing_studies": "Active areas include environmental DNA (eDNA) sampling in suspected habitat, networked thermal and trail-camera arrays, large-N acoustic monitoring, and statistical analyses of long-running sighting databases (e.g. Lozier et al. 2009)."
   },
-  "sources": []
+
+  "sources": [
+    { "id": "meldrum-2006", "type": "book", "title": "Sasquatch: Legend Meets Science", "authors": ["Jeff Meldrum"], "publication": "Forge Books", "date": "2006", "isbn": "978-0765312174" },
+    { "id": "buhs-2009", "type": "book", "title": "Bigfoot: The Life and Times of a Legend", "authors": ["Joshua Blu Buhs"], "publication": "University of Chicago Press", "date": "2009", "isbn": "978-0226079790" },
+    { "id": "krantz-1992", "type": "book", "title": "Big Footprints: A Scientific Inquiry into the Reality of Sasquatch", "authors": ["Grover Krantz"], "publication": "Johnson Books", "date": "1992", "isbn": "978-1555661472" },
+    { "id": "bindernagel-1998", "type": "book", "title": "North America's Great Ape: The Sasquatch", "authors": ["John Bindernagel"], "publication": "Beachcomber Books", "date": "1998", "isbn": "978-0968288405" },
+    { "id": "pyle-1995", "type": "book", "title": "Where Bigfoot Walks: Crossing the Dark Divide", "authors": ["Robert Michael Pyle"], "publication": "Houghton Mifflin", "date": "1995", "isbn": "978-0395657607" },
+    { "id": "green-1978", "type": "book", "title": "Sasquatch: The Apes Among Us", "authors": ["John Green"], "publication": "Hancock House", "date": "1978", "isbn": "978-0888390233" },
+    { "id": "coleman-2003", "type": "book", "title": "Bigfoot! The True Story of Apes in America", "authors": ["Loren Coleman"], "publication": "Paraview Pocket Books", "date": "2003", "isbn": "978-0743469753" },
+    { "id": "napier-1973", "type": "book", "title": "Bigfoot: The Yeti and Sasquatch in Myth and Reality", "authors": ["John Napier"], "publication": "E. P. Dutton", "date": "1973", "isbn": "978-0525066583" },
+    { "id": "beck-1967", "type": "book", "title": "I Fought the Apemen of Mt. St. Helens", "authors": ["Fred Beck"], "publication": "Self-published", "date": "1967" },
+    { "id": "sykes-2014", "type": "paper", "title": "Genetic analysis of hair samples attributed to yeti, bigfoot and other anomalous primates", "authors": ["Bryan C. Sykes", "Rhettman A. Mullis", "Christophe Hagenmuller", "Terry W. Melton", "Michel Sartori"], "publication": "Proceedings of the Royal Society B", "date": "2014", "doi": "10.1098/rspb.2014.0161" },
+    { "id": "lozier-2009", "type": "paper", "title": "Predicting the distribution of Sasquatch in western North America: anything goes with ecological niche modelling", "authors": ["Jason D. Lozier", "Pierre Aniello", "Michael J. Hickerson"], "publication": "Journal of Biogeography", "date": "2009", "doi": "10.1111/j.1365-2699.2009.02152.x" },
+    { "id": "bfro-database", "type": "website", "title": "BFRO Geographic Database", "url": "https://www.bfro.net/gdb/", "accessed": "2026-05-07" },
+    { "id": "humboldt-times-1958", "type": "news", "title": "Bigfoot tracks at Bluff Creek", "authors": ["Andrew Genzoli"], "publication": "Humboldt Times (Eureka, CA)", "date": "1958-10" }
+  ]
 }
